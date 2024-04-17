@@ -22,7 +22,7 @@ router.get('/',(req, res, next)=>{
                    name: doc.name,
                    request: {
                     type: 'GET',
-                    url: 'http://localhost:3000/users/'+doc._id
+                    //url: 'http://localhost:3000/users/'+doc._id
                    }
                 }
             })
