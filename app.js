@@ -21,6 +21,9 @@ app.use((req, res, next) => {
     next();
 });
 
+
+
+
 const productRoutes = require('./api/routers/products');
 const userRouters = require('./api/routers/users');
 const orderRouters = require('./api/routers/orders');
@@ -42,7 +45,9 @@ mongoose.connect(dbURI
 
 
 
-
+app.get('/', (req, res, next) => {
+        res.send('Welcome to the root route!');
+    });
 app.use('/products', productRoutes);
 app.use('/users', userRouters);
 app.use('/orders', orderRouters);
